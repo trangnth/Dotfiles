@@ -30,9 +30,9 @@ mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-sed -i "s/\"colorscheme tequila-sunrise/colorscheme tequila-sunrise/" /root/.vimrc
 vim ~/.vimrc -c :PluginInstall -c :x -c :x
 #vim ~/.vimrc -c :PluginInstall -c :x -c :x
+sed -i "s/\"colorscheme tequila-sunrise/colorscheme tequila-sunrise/" /root/.vimrc
 cd -
 
 
