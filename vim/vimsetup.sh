@@ -25,13 +25,13 @@ cp Monaco-Powerline.otf /usr/share/fonts/
 
 #yum install fontconfig -y
 sudo mv PowerlineSymbols.otf /usr/share/fonts/
-fc-cache -vf /usr/share/fonts/
 mv 10-powerline-symbols.conf /etc/fonts/conf.d/
+chmod 777 /etc/fonts/conf.d/10-powerline-symbols.conf
+fc-cache -vf /usr/share/fonts/
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim ~/.vimrc -c :PluginInstall -c :x -c :x
-#vim ~/.vimrc -c :PluginInstall -c :x -c :x
 sed -i "s/\"colorscheme tequila-sunrise/colorscheme tequila-sunrise/" /root/.vimrc
 cd -
 
