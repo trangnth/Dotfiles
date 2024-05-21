@@ -27,3 +27,22 @@ chmod +x vimsetup.sh
 * Giao diện tương tự
 
 <img src="img/1.png" alt="">
+
+## Note 
+
+* split in vim
+	* `ctrl + w` -> `v`: split Horizontally
+   	* `ctrl + w` -> `s`: split Vertically
+   	* `ctrl + w` -> `l`: To navigate to the right pane
+   	* `ctrl + w` -> `h`: To head back to the left pane
+   	* `ctrl + w` -> `k`: To head back to the upper pane
+   	* `ctrl + w` -> `j`: To head back to the bottom pane
+   	* more: https://www.tecmint.com/split-vim-screen/
+* open file in vim and split
+  	* `:vsp filename` or `:vs filename` for a vertical split
+  	* `:sp filename` for a horizontal split
+  	* or `vim --help`
+  	  	* `-p[N]`  Open N tab pages (default: one for each file)
+		* `-o[N]`  Open N windows (default: one for each file)
+		* `-O[N]`  Like -o but split vertically
+  	  	* So type this to open files split horizontally, for example: `vim -o file1.txt file2.txt file3.txt`
