@@ -1,0 +1,78 @@
+set rtp+=/root/.local/lib/python3.7/site-packages/powerline/bindings/vim/
+set laststatus=2
+set t_Co=256
+
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+"Plugin 'powerline/powerline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'lithammer/vim-eighties'
+Plugin 'rhysd/wallaby.vim'
+Plugin 'theJian/Mogao'
+Plugin 'scottymoon/vim-chalkboard'
+Plugin 'rafalbromirski/vim-aurora'
+
+Plugin 'caglartoklu/qbcolor.vim'
+Plugin 'shapeoflambda/dark-purple.vim'
+Plugin 'levelone/tequila-sunrise.vim'
+"Plugin 'maslaral/eink.vim'
+Plugin 'sainnhe/edge'
+Plugin 'sainnhe/gruvbox-material'
+
+Plugin 'ctrlpvim/ctrlp.vim'
+
+Plugin 'hdima/python-syntax'
+Plugin 'ekalinin/Dockerfile.vim'
+
+" auto complete
+"Plugin 'zxqfl/tabnine-vim'
+
+call vundle#end()
+
+filetype plugin indent on
+
+" set color
+syntax enable
+set t_Co=256
+set background=dark	
+" sua trong file color lighter_black  4E4E4E -> 79CDCD
+"colorscheme tequila-sunrise
+
+map <C-n> :NERDTreeToggle<CR>
+nmap ev :tabedit <CR>
+set expandtab ts=4 sw=4 ai
+
+" on off mode paste
+set pastetoggle=<F2>
+set paste
+
+let python_highlight_all = 1
+"filetype plugin indent on
+" set laststatus=2 " Always display the statusline in all windows
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+let g:Powerline_symbols = "fancy"
+
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+set showtabline=2 " Always display the tabline, even if there is only one tab
+"set tabline=%!tabber#TabLine()"
+
+set encoding=utf-8
+set guifont=Monaco:h11
+set fileencodings=ucs-bom,utf8,prc
+set guifontwide=NSimsun:h12
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
+"let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
